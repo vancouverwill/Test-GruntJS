@@ -49,7 +49,9 @@ Grunt comes out of the box with a bunch of command:
 * test - Run unit tests with nodeunit.
 * watch - Run predefined tasks whenever watched files change.
 
-Here is a more elaborate example:
+Here is a more elaborate example using the files of this repository.
+`git clone git@github.com:maxparm/Test-GruntJS.git`
+
 
 ```javascript
 module.exports = function (grunt) {
@@ -94,5 +96,6 @@ So for example when executing `grunt lib` in your command line you will execute 
 * `lint:lib` to lint `dist/js/lib.js`
 * `min:lib` to minify `dist/js/lib.js` in `dist/js/lib.min.js`
 
-Simple no!?
+
+Et voila! You have concatenate, lint and minify your library files in a few seconds! Simple no!?
 
