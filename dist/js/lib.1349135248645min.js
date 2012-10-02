@@ -1,0 +1,1 @@
+var myNamespace=function(){var e,t;return e=0,t=function(e){console.log(e)},{myPublicVar:"foo",myPublicFunction:function(n){e++,t(n)}}}(),testModule=function(){var e=0;return{incrementCounter:function(){return e++},resetCounter:function(){console.log("counter value prior to reset: "+e),e=0}}}();
