@@ -97,5 +97,19 @@ So for example when executing `grunt lib` in your command line you will execute 
 * `min:lib` to minify `dist/js/lib.js` in `dist/js/lib.min.js`
 
 
-Et voila! You have concatenate, lint and minify your library files in a few seconds! Simple no!?
+Et voila le resultat!
+```bash
+$ grunt lib
+Running "concat:lib" (concat) task
+File "dist/js/lib.js" created.
 
+Running "lint:lib" (lint) task
+Lint free.
+
+Running "min:lib" (min) task
+File "dist/js/lib.min.js" created.
+Uncompressed size: 984 bytes.
+Compressed size: 191 bytes gzipped (296 bytes minified).
+```
+
+You have concatenate, lint and minify your library files in a few seconds! Simple no!?
