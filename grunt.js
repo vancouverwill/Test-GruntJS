@@ -25,9 +25,23 @@ module.exports = function (grunt) {
         src: ['src/js/lib/my-namespace.js', 'src/js/lib/test-module.js'],
         dest: 'dist/js/lib.js'
       }
+    },
+    less: {
+      development: {
+        options: {
+          paths: ["stylesheets"]
+        },
+        files: {
+          "stylesheets/styles.css": "stylesheets/styles.less",
+          "stylesheets/text.css": "stylesheets/text.less"
+        }
+      }
     }
   });
 
+  //initialize grunt lessCSS build manager
+  grunt.loadNpmTasks('grunt-contrib-less');
+  
   // Default task
   // 1. concatenate
   // 2. minify
@@ -35,4 +49,9 @@ module.exports = function (grunt) {
 
   // Vendor task
   grunt.registerTask('vendors', 'concat:vendors min:vendors');
+
+  //lessCSS task
+  // grunt.registerTask('styles', 'less');
+
+   grunt.registerTask('default', 'less: development');
 };
