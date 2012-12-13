@@ -113,3 +113,31 @@ Compressed size: 191 bytes gzipped (296 bytes minified).
 ```
 
 You have concatenate, lint and minify your library files in a few seconds! Simple no!?
+
+
+
+Additions for LessCSS
+
+1) install grunt-contrib-less with `npm install grunt-contrib-less`
+
+note this needs to be done
+
+2) to get your grunt.js file to work with add this line before the first grunt.registerTask()
+
+`grunt.loadNpmTasks('grunt-contrib-less');`
+
+3) inside the grunt.initConfig{} object put in a new less object like the below
+
+ `less: {
+      development: {
+        options: {
+          paths: ["stylesheets"]
+        },
+        files: {
+          "stylesheets/styles.css": "stylesheets/styles.less",
+          "stylesheets/text.css": "stylesheets/text.less"
+        }
+      }
+    }`
+
+  note that to call this  grunt.registerTask('styles', 'less');  

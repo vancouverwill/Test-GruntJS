@@ -51,7 +51,7 @@ module.exports = function (grunt) {
   grunt.registerTask('vendors', 'concat:vendors min:vendors');
 
   //lessCSS task
-  // grunt.registerTask('styles', 'less');
+  grunt.registerTask('styles', 'less');
 
-   grunt.registerTask('default', 'less: development');
+   grunt.registerTask('default', 'less');
 };
