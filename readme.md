@@ -128,7 +128,7 @@ note this needs to be done
 
 3) inside the grunt.initConfig{} object put in a new less object like the below
 
- ``less: {
+ ```less: {
       development: {
         options: {
           paths: ["stylesheets"]
@@ -138,6 +138,12 @@ note this needs to be done
           "stylesheets/text.css": "stylesheets/text.less"
         }
       }
-    }``
+    }```
 
-  note that to call this  `grunt.registerTask('styles', 'less');`  
+  note that to call this add in `grunt.registerTask('styles', 'less');` 
+
+5) From the terminal got to the root of your project and you can now call this with `grunt less`
+
+6) Alternatively add in `grunt.registerTask('default', 'less');` . This will set the default task to running less and then you can just run 'grunt' from the terminal.
+
+7) To see the complete example just have a look at the grunt.js in this gitHub project.
