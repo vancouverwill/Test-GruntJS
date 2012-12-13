@@ -128,7 +128,7 @@ note this needs to be done
 
 3) inside the grunt.initConfig{} object put in a new less object like the below
 
- `less: {
+ ``less: {
       development: {
         options: {
           paths: ["stylesheets"]
@@ -138,6 +138,6 @@ note this needs to be done
           "stylesheets/text.css": "stylesheets/text.less"
         }
       }
-    }`
+    }``
 
-  note that to call this  grunt.registerTask('styles', 'less');  
+  note that to call this  `grunt.registerTask('styles', 'less');`  
